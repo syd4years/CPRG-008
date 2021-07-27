@@ -1,0 +1,116 @@
+extends layout 
+block content 
+  //
+    David Grant
+    2021/07/13
+    CPRG-008
+    Assignment 1 - Day 8-18
+
+  // Use layout.pug for banner and menu
+
+
+  .sticky
+    header
+      .header
+        img(src='banner.jpg' width='100%' height='300px')
+        .left
+          img(src='logo.png' width='50%' height='auto')
+        // Top right links for register and sign in
+        .register
+          a(href='register.html' target='mainpage') Register
+          a(href='signin.html') Sign in
+        // Bottom left links on banner
+        .tabs
+          a(href='packages.html') Vacation Packages
+          a(href='hotels.html') Hotels
+          a(href='offers.html') Special Offers
+          a(href='contact.html') Contact
+        // Drop down hamburger menu if the screen is less than 600px wide
+        .dropdownright
+          .dropdown
+            button.dropbtn
+              .menu
+              .menu
+              .menu
+            .dropdown-content
+              a(href='register.html') Register
+              a(href='signin.html') Sign in
+              a(href='packages.html') Vacation Packages
+              a(href='hotels.html') Hotels
+              a(href='offers.html') Special Offers
+              a(href='contact.html') Contact
+  // End of banner/nav menu
+  // Formatting and style for contact info
+  .container
+    .row
+      .leftTable
+        p.leftTable Travel Experts customer support
+      .centerTable
+        br
+        | 403-123-4567
+      .centerTable
+        br
+        | Support@TravelExperts.com
+    .row
+      .leftTable
+        p.leftTable
+          br
+          br
+          | Senior agent
+      .centerTable
+        br
+        br
+        br
+        br
+        | Frank Frankenson
+      .centerTable
+        br
+        br
+        br
+        br
+        | 403-123-4568
+      .centerTable
+        br
+        br
+        br
+        br
+        | FrankFrankenson@TravelExperts.com
+    .row
+      .leftTable
+        p.leftTable Senior agent
+      .centerTable
+        br
+        | Susy Susanson
+      .centerTable
+        br
+        | 403-123-4569
+      .centerTable
+        br
+        | SusySusanson@TravelExperts.com
+    .row
+      .leftTable
+        p.leftTable Travel agent
+      .centerTable
+        br
+        | Bob Bobanson
+      .centerTable
+        br
+        | 403-123-4560
+      .centerTable
+        br
+        | BobBobanson@TravelExperts.com
+    .row
+      .leftTable
+        p.leftTable Travel agent
+      .centerTable
+        br
+        | Sara Saranson
+      .centerTable
+        br
+        | 403-123-4559
+      .centerTable
+        br
+        | SaraSaranson@TravelExperts.com
+  // Copyright footer
+  footer
+    .stickyBottom Travel experts &copy; Copyright 2021 David Grant

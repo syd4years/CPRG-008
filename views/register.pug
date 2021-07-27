@@ -1,0 +1,85 @@
+extends layout 
+block content  
+  //
+    David Grant
+    2021/07/13
+    CPRG-008
+    Assignment 5/6 - Day 8-18
+
+  // Use layout.pug for banner and menu
+  
+
+  .container
+    // On form submit call verification function
+    form(action='/register' method='POST')
+      .row
+        .leftTable
+          label(for='email') Email
+        .centerTable
+          input#email.form-control(type='text' name='email' placeholder='Email' onfocus="displayText('email')")
+      .row
+        .leftTable
+          label(for='password') Password
+        .centerTable
+          input#password.form-control(type='password' name='password' placeholder='Password' onfocus="displayText('password')")
+      .row
+        .leftTable
+          label(for='fname') First Name
+        .centerTable
+          input#fname.form-control(type='text' name='fname' placeholder='First name')
+      .row
+        .leftTable
+          label(for='lname') Last Name
+        .centerTable
+          input#lname.form-control(type='text' name='lname' placeholder='Last name')
+      .row
+        .leftTable
+          label(for='address') Address
+        .centerTable
+          input#address.form-control(type='text' name='address' placeholder='Address')
+      .row
+        .leftTable
+          label(for='postal') Postal code
+        .centerTable
+          input#postal.form-control(type='text' name='postal' placeholder='Postal code')
+      .row
+        .leftTable
+          label(for='province') Province
+        // Dropdown for provinces
+        .centerTable
+          select#province.form-control(name='province')
+            option(value='AB') AB
+            option(value='BC') BC
+            option(value='MB') MB
+            option(value='NB') NB
+            option(value='NL') NL
+            option(value='NT') NT
+            option(value='NS') NS
+            option(value='NU') NU
+            option(value='ON') ON
+      .row
+        .leftTable
+          label(for='country') Country
+        // Dropdown for countries
+        .centerTable
+          select#country.form-control(name='country')
+            option(value='canada') Canada
+            option(value='australia') Australia
+            option(value='usa') USA
+
+      // Display errors if form fields not correct      
+      .row
+        if errors
+          ul
+            each error in errors
+              li=error
+
+      
+        // Day 5 excercise. Confirm pop up when buttons clicked
+        input(type='submit' onclick="return confirm('do you really want to submit?');" value='Submit')
+        input(type='reset' onclick="return confirm('do you really want to reset?');" value='Reset')
+  
+
+  // Copyright footer
+  footer
+    .stickyBottom Travel experts &copy; Copyright 2021 David Grant

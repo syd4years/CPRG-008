@@ -1,0 +1,54 @@
+extends layout 
+block content
+  //
+    David Grant
+    2021/07/13
+    CPRG-008
+    Assignment 4 - Day 8-18
+
+  // Extend layout, use layout.pug for banner and menu
+
+
+
+  h1 Popular travel packages
+  // Row of images and descriptions for packages
+  .container
+    .row
+      .dropdownpackages
+        .travel-packages
+          a(target='_blank' href='japan.jpg')
+            img#0(src='/images/japan.jpg' img='' alt='Japan' width='400' height='250')
+          .dropdown-contentpackages
+            img(src='/images/japan.jpg' alt='Japan' width='600' height='300')
+          .destination
+            p Tokyo, Japan
+      .dropdownpackages
+        .travel-packages
+          a(target='_blank' href='sydney.jpg')
+            img#1(src='/images/sydney.jpg' alt='Sydney' width='400' height='250')
+          .dropdown-contentpackages
+            img(src='/images/sydney.jpg' alt='Sydney' width='600' height='300')
+          .destination
+            p Sydney, Australia
+      .dropdownpackages
+        .travel-packages
+          a(target='_blank' href='rome.jpg')
+            img#2(src='/images/rome.jpg' alt='Rome' width='400' height='250')
+          .dropdown-contentpackages
+            img(src='/images/rome.jpg' alt='Rome' width='600' height='300')
+          .destination
+            p Rome, Italy
+      .dropdownpackages
+        .travel-packages
+          a(target='_blank' href='egypt.jpg')
+            img#3(src='/images/egypt.jpg' alt='Cairo' width='400' height='250')
+          .dropdown-contentpackages
+            img(src='/images/egypt.jpg' alt='Cairo' width='600' height='300')
+          .destination
+            p Cairo, Egypt
+
+  h1 Current Specials
+  // Copyright footer
+  footer
+    .stickyBottom
+      p Travel experts &copy; Copyright 2021 David Grant
